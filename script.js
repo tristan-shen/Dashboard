@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
         timeValueChart.data.datasets[0].data = values;
         timeValueChart.update();
 
-        interestBarChart.data.datasets[0].data = [interest5, interest10, interest15];
+        interestBarChart.data.datasets[0].data = [totalInterest5, totalInterest10, totalInterest15];
         interestBarChart.update();
 
         document.getElementById('interest5').innerText = `$${interest5.toFixed(2)}`;
