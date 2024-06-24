@@ -75,12 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var interest10 = money * Math.pow(1 + interestRate, 10) - money * Math.pow(1 + interestRate, 9);
         var interest15 = money * Math.pow(1 + interestRate, 15) - money * Math.pow(1 + interestRate, 14);
 
-        document.getElementById('totalInterest5').innerText = `$${interest5.toFixed(2)}`;
-        document.getElementById('averageInterest5').innerText = `$${(interest5 / 5).toFixed(2)}`;
-        document.getElementById('totalInterest10').innerText = `$${interest10.toFixed(2)}`;
-        document.getElementById('averageInterest10').innerText = `$${(interest10 / 10).toFixed(2)}`;
-        document.getElementById('totalInterest15').innerText = `$${interest15.toFixed(2)}`;
-        document.getElementById('averageInterest15').innerText = `$${(interest15 / 15).toFixed(2)}`;
+        var totalInterest5 = money * Math.pow(1 + interestRate, 5) - money;
+        var totalInterest10 = money * Math.pow(1 + interestRate, 10) - money;
+        var totalInterest15 = money * Math.pow(1 + interestRate, 15) - money;
+
+        document.getElementById('totalInterest5').innerText = `$${totalInterest5.toFixed(2)}`;
+        document.getElementById('averageInterest5').innerText = `$${(totalInterest5 / 5).toFixed(2)}`;
+        document.getElementById('totalInterest10').innerText = `$${totalInterest10.toFixed(2)}`;
+        document.getElementById('averageInterest10').innerText = `$${(totalInterest10 / 10).toFixed(2)}`;
+        document.getElementById('totalInterest15').innerText = `$${totalInterest15.toFixed(2)}`;
+        document.getElementById('averageInterest15').innerText = `$${(totalInterest15 / 15).toFixed(2)}`;
 
         var years = [];
         var values = [];
